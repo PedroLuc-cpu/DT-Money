@@ -1,9 +1,29 @@
+import { useEffect, useState } from "react";
 import { Header } from "../../components/Header";
 import { Summary } from "../../components/Summary";
 import { SearchForm } from "./components/SearchForm";
 import { PriceHighlight, TransactionContainer, TransactionTable } from "./styles";
 
+interface Transaction{
+  id:number;
+  description:string;
+  type: 'income'|'outcome';
+  price:number;
+  category:string;
+  createdAt: string
+}
+
 export function Transaction() {
+    const [transaction, setTransaction] = useState<Transaction[]>([])
+
+    async function loadTransaction(){
+       const response = await fetch('http://localhost:3000/transations');
+       const data = await response.json();
+       console.log(data);
+       setTransaction(data);
+    }
+    useEffect(() =>{loadTransaction()},[])
+
   return (
     <div>
       <Header />
@@ -13,54 +33,16 @@ export function Transaction() {
         <SearchForm />
         <TransactionTable>
         <tbody>
-          <tr>
-            <td width="50%">Desenvolvimento de site</td>
-            <td><PriceHighlight variant="income">R$ 12.000,00</PriceHighlight></td>
-            <td>Venda</td>
-            <td>13/04/2022</td>
+          {transaction.map(transaction =>{
+            return(
+            <tr key={transaction.id}>
+              <td width="50%">{transaction.description}</td>
+              <td><PriceHighlight variant={transaction.type}>{transaction.price}</PriceHighlight></td>
+              <td>{transaction.category}</td>
+              <td>{transaction.createdAt}</td>
           </tr>
-
-          <tr>
-            <td width="50%">Aluguel do apartamento</td>
-            <td><PriceHighlight variant="outcome">- R$ 1.200,00</PriceHighlight></td>
-            <td>Venda</td>
-            <td>13/04/2022</td>
-          </tr>
-
-          <tr>
-            <td width="50%">Desenvolvimento de site</td>
-            <td><PriceHighlight variant="income">R$ 12.000,00</PriceHighlight></td>
-            <td>Venda</td>
-            <td>13/04/2022</td>
-          </tr>
-
-          <tr>
-            <td width="50%">Computador</td>
-            <td><PriceHighlight variant="income">R$ 12.000,00</PriceHighlight></td>
-            <td>Venda</td>
-            <td>13/04/2022</td>
-          </tr>
-
-          <tr>
-            <td width="50%">Desenvolvimento de site</td>
-            <td><PriceHighlight variant="income">R$ 12.000,00</PriceHighlight></td>
-            <td>Venda</td>
-            <td>13/04/2022</td>
-          </tr>
-
-          <tr>
-            <td width="50%">Desenvolvimento de site</td>
-            <td><PriceHighlight variant="outcome">- R$ 1.200,00</PriceHighlight></td>
-            <td>Venda</td>
-            <td>13/04/2022</td>
-          </tr>
-
-          <tr>
-            <td width="50%">Fone de ouvido</td>
-            <td><PriceHighlight variant="outcome">- R$ 150.00</PriceHighlight></td>
-            <td>Venda</td>
-            <td>13/04/2022</td>
-          </tr>
+            ) 
+          })}
         </tbody>
       </TransactionTable>
      </TransactionContainer>
