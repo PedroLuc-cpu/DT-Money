@@ -1,0 +1,20 @@
+{
+"transations":[
+       {
+              "id": 1,
+              "description": "Desenvolvimento de software",
+              "type":"income",
+              "category":"Venda",
+              "price":14000,
+              "createdAt":"2023-05-24T19:00:33.505Z"
+       },
+              {
+              "id": 2,
+              "description": "Compra do mês",
+              "type":"outcome",
+              "category":"Alimentação",
+              "price":14,
+              "createdAt":"2023-05-22T19:00:33.505Z"
+       }
+]
+}
