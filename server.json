@@ -15,6 +15,46 @@
               "category":"Alimentação",
               "price":14,
               "createdAt":"2023-05-22T19:00:33.505Z"
+       },
+              {
+              "id": 3,
+              "description": "aluguel",
+              "type":"outcome",
+              "category":"Contas a pagar",
+              "price":800,
+              "createdAt":"2023-05-21T10:00:33.505Z"
+       },
+              {
+              "id": 4,
+              "description": "Vale Alimentação",
+              "type":"income",
+              "category":"Vale",
+              "price":201,
+              "createdAt":"2023-05-22T19:00:33.505Z"
+       },
+              {
+              "id": 5,
+              "description": "Frete da mudança",
+              "type":"outcome",
+              "category":"mudança",
+              "price":650,
+              "createdAt":"2023-05-22T19:00:33.505Z"
+       },
+              {
+              "id": 6,
+              "description": "Salario do mês",
+              "type":"income",
+              "category":"Salario",
+              "price":1800,
+              "createdAt":"2023-06-04T19:00:33.505Z"
+       },
+              {
+              "id": 7,
+              "description": "Vale Transporte",
+              "type":"income",
+              "category":"Vale",
+              "price":200,
+              "createdAt":"2023-06-01T08:00:33.505Z"
        }
 ]
 }
