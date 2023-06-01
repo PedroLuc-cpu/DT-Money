@@ -52,10 +52,15 @@ border-radius: 6px;
 margin-top: 1.5rem;
 cursor: pointer;
 
-&:hover{
+&:not(:disabled):hover{
 background: ${props => props.theme['green-700']};
 transition: background-color 0.2s;
 }
+}
+
+&:disabled{
+opacity: 0.7;
+cursor: not-allowed;
 }
 }
 `
