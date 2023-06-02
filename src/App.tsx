@@ -5,12 +5,12 @@ import { Transaction } from './pages/Transactions'
 import { TransactionProvider } from './contexts/TransactionsContext'
 
 export function App() {
-return (
-       <ThemeProvider theme={defaultTheme}>
-       <GlobalStyle />
-       <TransactionProvider>
-       <Transaction />
-       </TransactionProvider>
-       </ThemeProvider>
-)
+  return (
+    <ThemeProvider theme={defaultTheme}>
+      <GlobalStyle />
+      <TransactionProvider>
+        <Transaction />
+      </TransactionProvider>
+    </ThemeProvider>
+  )
 }

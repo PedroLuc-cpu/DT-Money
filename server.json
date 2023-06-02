@@ -1,92 +1,52 @@
 {
   "transations": [
     {
-      "id": 1,
-      "description": "Desenvolvimento de software",
-      "type": "income",
-      "category": "Venda",
-      "price": 14000,
-      "createdAt": "2023-05-24T19:00:33.505Z"
-    },
-    {
-      "id": 2,
-      "description": "Compra do mês",
-      "type": "outcome",
-      "category": "Alimentação",
-      "price": 14,
-      "createdAt": "2023-05-22T19:00:33.505Z"
-    },
-    {
-      "id": 3,
-      "description": "aluguel",
-      "type": "outcome",
-      "category": "Contas a pagar",
-      "price": 800,
-      "createdAt": "2023-05-21T10:00:33.505Z"
-    },
-    {
-      "id": 4,
-      "description": "Vale Alimentação",
-      "type": "income",
-      "category": "Vale",
-      "price": 201,
-      "createdAt": "2023-05-22T19:00:33.505Z"
-    },
-    {
-      "id": 5,
-      "description": "Frete da mudança",
-      "type": "outcome",
-      "category": "mudança",
-      "price": 650,
-      "createdAt": "2023-05-22T19:00:33.505Z"
-    },
-    {
-      "id": 6,
-      "description": "Salario do mês",
-      "type": "income",
-      "category": "Salario",
-      "price": 1800,
-      "createdAt": "2023-06-04T19:00:33.505Z"
-    },
-    {
-      "id": 7,
-      "description": "Vale Transporte",
-      "type": "income",
-      "category": "Vale",
-      "price": 200,
-      "createdAt": "2023-06-01T08:00:33.505Z"
-    },
-    {
       "description": "Desenvolvimento de app mobile",
-      "price": 10000,
-      "category": "Venda",
+      "price": 1600,
+      "category": "Salario",
       "type": "income",
-      "createdAt": "2023-06-02T00:38:59.838Z",
-      "id": 8
-    },
-    {
-      "description": "cliente desistiu de comprar",
-      "price": 10000,
-      "category": "estorno",
-      "type": "outcome",
-      "createdAt": "2023-06-02T00:39:33.101Z",
-      "id": 9
-    },
-    {
-      "description": "Marmita do almoço",
-      "price": 18,
-      "category": "Alimentação",
-      "type": "outcome",
-      "createdAt": "2023-06-02T01:11:48.800Z",
-      "id": 10
+      "createdAt": "2023-06-02T01:23:30.608Z",
+      "id": 1
     },
     {
       "description": "Vale de transporte",
       "price": 215,
       "category": "Vale",
       "type": "income",
-      "createdAt": "2023-06-02T01:12:26.935Z",
-      "id": 11
+      "createdAt": "2023-06-02T01:23:43.554Z",
+      "id": 2
+    },
+    {
+      "description": "Vale de alimentaçao",
+      "price": 200,
+      "category": "Vale",
+      "type": "income",
+      "createdAt": "2023-06-02T01:24:04.265Z",
+      "id": 3
+    },
+    {
+      "description": "aluguel da casa",
+      "price": 800,
+      "category": "aluguel",
+      "type": "outcome",
+      "createdAt": "2023-06-02T01:24:30.848Z",
+      "id": 4
+    },
+    {
+      "description": "Frete da mudança",
+      "price": 300,
+      "category": "Frete",
+      "type": "outcome",
+      "createdAt": "2023-06-02T01:24:49.648Z",
+      "id": 5
+    },
+    {
+      "description": "Consocio da moto",
+      "price": 658,
+      "category": "Consocio ",
+      "type": "outcome",
+      "createdAt": "2023-06-02T01:25:22.380Z",
+      "id": 6
     }
   ]
 }
