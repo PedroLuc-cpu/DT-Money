@@ -2,9 +2,9 @@ import { ReactNode, createContext, useEffect, useState } from 'react'
 import { api } from '../lib/axios'
 
 interface Transaction {
-  id: number
+  id: string
   description: string
-  type: 'income' | 'outcome'
+  body: 'income' | 'outcome'
   price: number
   category: string
   createdAt: string
@@ -33,26 +33,25 @@ export function TransactionProvider({ children }: TransactionProviderProps) {
 
   async function createTransaction(data: CreateTransactionInput) {
     const { description, price, category, type } = data
-    const response = await api.post('transations', {
+    const response = await api.post('/api/v1/transactions', {
       description,
       price,
       category,
       type,
-      createdAt: new Date(),
     })
 
-    setTransaction((state) => [response.data, ...state])
+    setTransaction((state) => [response.data.data, ...state])
   }
 
   async function fetchTransactions(query?: string) {
-    const reponse = await api.get('/transations', {
+    const reponse = await api.get('/api/v1/transactions', {
       params: {
         _sort: 'createdAt',
         _order: 'desc',
         q: query,
       },
     })
-    setTransaction(reponse.data)
+    setTransaction(reponse.data.data)
   }
 
   useEffect(() => {

@@ -12,6 +12,9 @@ import { dateFormatter, priceFormatter } from '../../utils/formatter'
 
 export function Transaction() {
   const { transaction } = useContext(TransactionContext)
+  if (!Array.isArray(transaction)) {
+    return <div>Loading...</div>
+  }
 
   return (
     <div>
@@ -27,8 +30,8 @@ export function Transaction() {
                 <tr key={transaction.id}>
                   <td width="50%">{transaction.description}</td>
                   <td>
-                    <PriceHighlight variant={transaction.type}>
-                      {transaction.type === 'outcome' && '- '}
+                    <PriceHighlight variant={transaction.body}>
+                      {transaction.body === 'outcome' && '- '}
                       {priceFormatter.format(transaction.price)}
                     </PriceHighlight>
                   </td>
